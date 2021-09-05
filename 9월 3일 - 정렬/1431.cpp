@@ -14,9 +14,9 @@ bool compare(const string &a, const string &b){
   // 02. 길이가 같으면 자리수 합 작은 것이 우선
   int a_sum = 0, b_sum = 0;
   for (int i=0; i<a.length(); i++){
-    if (a[i] >= '0' && a[i] <= '9')
+    if (isdigit(a[i]) != 0)
       a_sum += a[i] - '0';
-    if (b[i] >= '0' && b[i] <= '9')
+    if (isdigit(b[i]) != 0)
       b_sum += b[i] - '0';
   }
   if (a_sum != b_sum)
