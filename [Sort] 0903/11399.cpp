@@ -7,13 +7,9 @@ using namespace std;
 vector<int> times;
 
 int solution(int n){
-  int answer = 0, sum=0;
+  int answer = 0;
   for (int i=0; i<n; i++){
-    for (int j=0; j<=i; j++){
-      sum += times[j];
-    }
-    answer+=sum;
-    sum = 0;
+    answer += (times[i]*(n-i)); // 시간 복잡도 줄이기
   }
   return answer;
 }

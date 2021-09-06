@@ -6,19 +6,24 @@ using namespace std;
 
 vector<string> arr;
 
+// 02-1. 문자열에서 숫자인 자리만 합해서 리턴
+int findSum(string str){
+    int sum = 0;
+    for (int i=0; i<str.length(); i++){
+        if (isdigit(str[i]) != 0)
+            sum += str[i] - '0';
+    }
+    return sum;
+}
+
 bool compare(const string &a, const string &b){
   // 01. 길이가 다르면 짧은 것 우선
   if (a.length() != b.length())
     return a.length() < b.length();
   
   // 02. 길이가 같으면 자리수 합 작은 것이 우선
-  int a_sum = 0, b_sum = 0;
-  for (int i=0; i<a.length(); i++){
-    if (isdigit(a[i]) != 0)
-      a_sum += a[i] - '0';
-    if (isdigit(b[i]) != 0)
-      b_sum += b[i] - '0';
-  }
+  int a_sum = findSum(a);
+  int b_sum = findSum(b);
   if (a_sum != b_sum)
     return a_sum < b_sum;
 

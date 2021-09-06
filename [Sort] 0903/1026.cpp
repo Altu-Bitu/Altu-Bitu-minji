@@ -1,6 +1,5 @@
 // 1026번 : 보물
-// 01. 문제 의도 고려 X
-/*
+// 01. 문제 의미(B 재배열 x)와는 다르나 실제로는 효과적인 풀이
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -36,9 +35,10 @@ int main(){
 
   cout << solution(n);
 }
-*/
 
-// 02. 문제 의도 고려 O
+
+// 02. B를 재배열하지 않는 풀이
+/*
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -82,3 +82,4 @@ int main(){
 
   cout << solution(n);
 }
+ */
