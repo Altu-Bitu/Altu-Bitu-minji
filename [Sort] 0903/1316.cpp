@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-char alphabet[26]; // char로 자료형 수정
+bool alphabet[26]; // bool 자료형으로 변경
 int cnt = 0;
 
 void checker(string word){
@@ -14,7 +14,7 @@ void checker(string word){
     // 그룹 단어가 아닌 경우
     if (word[i-1] != word[i] && alphabet[idx] != 0)
       return;
-    alphabet[idx]++;
+    alphabet[idx] = 1;
   }
   cnt++;
 }
