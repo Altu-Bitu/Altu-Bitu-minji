@@ -1,4 +1,4 @@
-// 10994¹ø : º° Âï±â - 19
+// 10994ë²ˆ : ë³„ ì°ê¸° - 19
 #include <iostream>
 using namespace std;
 char star[400][400];
@@ -7,7 +7,7 @@ char star[400][400];
 void solution(int x, int y, int n){
   int line = 4*(n-1);
 
-  /* 4ms ´À¸²
+  /* 4ms ëŠë¦¼
   if (n==1){
     star[x][y] = '*';
     return;
@@ -16,13 +16,13 @@ void solution(int x, int y, int n){
     return;
   for (int i=0; i<line+1; i++){
     for (int j=0; j<line+1; j++){
-      // ²Ë Âù ¶óÀÎ(¸Ç À§, ¾Æ·¡)
-      // Çà
+      // ê½‰ ì°¬ ë¼ì¸(ë§¨ ìœ„, ì•„ë˜)
+      // í–‰
       if (i==0 || i==line){
         star[x+i][y+j] = '*';
         continue;
       } 
-      // ¿­
+      // ì—´
       if (j==0 || j==line) {
         star[x+i][y+j] = '*';
         continue;
