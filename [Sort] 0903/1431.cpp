@@ -10,7 +10,7 @@ vector<string> arr;
 int findSum(string str){
     int sum = 0;
     for (int i=0; i<str.length(); i++){
-        if (isdigit(str[i]) != 0)
+        if (isdigit(str[i]) == true) // isdigit 반환형은 bool!
             sum += str[i] - '0';
     }
     return sum;
