@@ -19,6 +19,6 @@ int main(){
 
     // 출력
     for (auto iter = s.begin(); iter != s.end(); iter++){
-        cout << iter << " ";
+        cout << *iter << " ";
     }
 }

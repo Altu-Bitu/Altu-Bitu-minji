@@ -12,19 +12,18 @@ int main(){
     map<string, int> name;
     map<int, string> number;
 
-    // 입력
     cin >> n >> m;
+    // 포켓몬 번호 : 1번 ~ n번
     for (int i=1; i<=n; i++){
         cin >> input;
-        name[input] = 1; // key : 이름, value : 번호
-        number[i] = input; // key : 번호, value : 이름
+        name[input] = i; // 이름 도감에 저장
+        number[i] = input; // 번호 도감에 저장
     }
 
-    // 출력
     while(m--){
         cin >> input;
-        if (isdigit(input[0])) // 입력이 숫자라면
-            cout << number[stoi(input)] << "\n"; // stoi : string to int
+        if (isdigit(input[0])) // 숫자면 번호 도감 참조
+            cout << number[stoi(input)] << "\n";
         else
             cout << name[input] << "\n";
     }
