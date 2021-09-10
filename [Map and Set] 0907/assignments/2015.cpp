@@ -2,7 +2,6 @@
 // Created by Kang Minji on 2021-09-10.
 //
 
-// 답이 다르게 나옴
 #include <iostream>
 #include <map>
 using namespace std;
@@ -11,9 +10,11 @@ int p_sum[200001];
 int main(){
     int n, k, num;
     cin >> n >> k;
-    map<int, int> m;
+    map<int, long long> m; // 부분합 개수 : 2000000000*(2000000000+1)/2
 
     long long cnt = 0;
+    m[0] = 1; // p_sum[i]가 k인 경우, j=0이 될 수 있음
+
     for (int i=1; i<=n; i++){
         cin >> num;
         // 01. 각각의 부분합을 저장

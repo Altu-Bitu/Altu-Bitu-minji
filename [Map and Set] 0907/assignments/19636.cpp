@@ -35,10 +35,8 @@ int main(){
         w1 += d_input - (basic + d_output);
         w2 += d_input - (basic2 + d_output);
         // 기초대사량 변화 : w2에만 반영됨, 체중 변화 다음에 발생
-        // floor 함수 사용에서 (double) 2.0을 사용하지 않았더니 백준에서 통과가 되지 않았음
-        // 반환형이 double이라 앞에 (int)를 붙이면 될 줄 알았는데 이것도 안 됨.
         if (abs(d_input - (basic2 + d_output)) > t)
-            basic2 += (double)floor((d_input - (basic2 + d_output))/2.0);
+            basic2 += floor((d_input - (basic2+d_output))/2.0);
     }
 
     // 출력 01. 일일 기초대사량의 변화 반영 X

@@ -3,7 +3,7 @@
 //
 
 #include <iostream>
-#include <map>
+#include <set>
 #include <vector>
 #include <algorithm>
 using namespace std;
@@ -13,11 +13,11 @@ int main(){
     string input;
     cin >> n >> m;
 
-    // 01. 듣도 못한 사람을 map에 등록
-    map<string, bool> name;
+    // 01. 듣도 못한 사람을 set에 등록
+    set<string> name; // map보다 빨라짐!(20ms)
     while (n--){
         cin >> input;
-        name[input] = true;
+        name.insert(input);
     }
 
     // 02. 보도 못한 사람과 듣도 못한 사람 비교
@@ -25,7 +25,7 @@ int main(){
     vector<string> dupName;
     while (m--){
         cin >> input;
-        if (name[input] == true){
+        if (name.count(input)){
             ans++;
             dupName.push_back(input);
         }

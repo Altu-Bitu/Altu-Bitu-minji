@@ -24,8 +24,8 @@ int main(){
     // ex) 1234, 0032
     string tmp = "";
     if (lenA != lenB){
-       for (int i=0; i<(lenA-lenB); i++)
-           tmp += "0";
+        for (int i=0; i<(lenA-lenB); i++)
+            tmp += "0";
     }
     b = tmp+b;
 
@@ -43,15 +43,22 @@ int main(){
         }
         if (digit > 9) // 반올림하는 경우
             carry = 1;
-        ans += to_string(digit%10);
+        ans += digit%10 + '0'; // to_string 사용 X
     }
 
     // 추가되는 한 자리 ex) 23+95 = (1)18
     if (carry == 1)
         ans += "1";
 
-    reverse(ans.begin(), ans.end());
 
-    cout << ans;
+    // 1.1 리버스 함수 사용
+//    reverse(ans.begin(), ans.end());
+//    cout << ans;
+
+    // 1.2 맨 뒤부터 거꾸로 출력(시간 복잡도 고려)
+    for (int i=ans.length() - 1; i>=0; i--){
+        cout << ans[i];
+    }
 
 }
+
