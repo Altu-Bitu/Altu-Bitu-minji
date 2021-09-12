@@ -1,2 +1,6 @@
-/assignments/cmake-build-debug/
+/cmake-build-debug/
 /examples/cmake-build-debug/
+/assignments/cmake-build-debug/
+/assignments/.idea/
+/examples/.idea/
+/CMakeLists.txt
