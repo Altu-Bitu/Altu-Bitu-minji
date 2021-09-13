@@ -7,4 +7,5 @@ add_executable(CMAKE_ROOT
         #examples/10828.cpp
         #examples/10845.cpp
         #examples/4949.cpp
-        examples/2164.cpp)
+        examples/2164.cpp
+        )

@@ -7,28 +7,23 @@
 using namespace std;
 
 int main(){
-    queue<int> q;
     int n;
+    queue<int> q;
 
-    // 입력
     cin >> n;
     for (int i=1; i<=n; i++)
         q.push(i);
 
-
-    // 연산
-    // 반복문 탈출 조건 : 큐에 카드가 1장 남음
+    // 탈출 조건 : 카드가 한 장 남을 때까지
     while(q.size() != 1){
-        // 위에 있는 카드 버리기
-        // empty 체크 안 한 이유 : while문 조건에서 empty인 경우 걸러짐
+        // 01. 제일 위에 있는 카드 버리기
         q.pop();
 
-        // 위에 있는 카드 맨 아래로 옮기기
+        // 02. 제일 위에 있는 카드를 제일 아래에 있는 카드 밑으로 옮기기
         int card = q.front();
         q.pop();
         q.push(card);
     }
 
-    // 출력
     cout << q.front();
 }

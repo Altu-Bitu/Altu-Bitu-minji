@@ -6,52 +6,52 @@
 #include <vector>
 #include <queue>
 using namespace std;
-const int SIZE = 10001; // 한 칸 더!
+//const int SIZE = 10001; // 한 칸 더!
 
-int front_pointer = 0, rear_pointer = 0;
-vector<int> queue_vec(SIZE);
+//int front_pointer = 0, rear_pointer = 0;
+//vector<int> queue_vec(SIZE);
 
-// empty
-bool empty(){
-    return front_pointer == rear_pointer;
-}
-
-// full
-bool full(){
-    // modulo 연산 필수!
-    return (rear_pointer +1) % SIZE == front_pointer;
-}
-
-// push
-void push(int k){
-    rear_pointer = (rear_pointer+1)%SIZE;
-    queue_vec[rear_pointer] = k;
-}
-
-// pop
-int pop(){
-    front_pointer = (front_pointer + 1)%SIZE;
-    return queue_vec[front_pointer];
-}
-
-//size
-int size(){ // rear = 1, front = 2
-    int tmp = (rear_pointer - front_pointer);
-    if (tmp < 0)
-        tmp += SIZE;
-    return tmp;
-}
-
-// front
-int front(){
-    int tmp = (front_pointer+1)%SIZE;
-    return queue_vec[tmp];
-}
-
-// back
-int back(){
-    return queue_vec[rear_pointer];
-}
+//// empty
+//bool empty(){
+//    return front_pointer == rear_pointer;
+//}
+//
+//// full
+//bool full(){
+//    // modulo 연산 필수!
+//    return (rear_pointer +1) % SIZE == front_pointer;
+//}
+//
+//// push
+//void push(int k){
+//    rear_pointer = (rear_pointer+1)%SIZE;
+//    queue_vec[rear_pointer] = k;
+//}
+//
+//// pop
+//int pop(){
+//    front_pointer = (front_pointer + 1)%SIZE;
+//    return queue_vec[front_pointer];
+//}
+//
+////size
+//int size(){ // rear = 1, front = 2
+//    int tmp = (rear_pointer - front_pointer);
+//    if (tmp < 0)
+//        tmp += SIZE;
+//    return tmp;
+//}
+//
+//// front
+//int front(){
+//    int tmp = (front_pointer+1)%SIZE;
+//    return queue_vec[tmp];
+//}
+//
+//// back
+//int back(){
+//    return queue_vec[rear_pointer];
+//}
 
 int main(){
     int n, k;
@@ -80,11 +80,25 @@ int main(){
             continue;
         }
         if (cmd == "empty"){
-            cout << q.empty() << "\n";
+            if (q.empty())
+                cout << 1 << "\n";
+            else
+                cout << 0 << "\n";
             continue;
         }
-        if (cmd == "top"{
-            is (s.empty())
-        })
+        if (cmd == "front"){
+            if (q.empty())
+                cout << -1 << "\n";
+            else
+                cout << q.front() << "\n";
+            continue;
+        }
+        if (cmd == "back"){
+            if (q.empty())
+                cout << -1 << "\n";
+            else
+                cout << q.back() << "\n";
+            continue;
+        }
     }
 }
