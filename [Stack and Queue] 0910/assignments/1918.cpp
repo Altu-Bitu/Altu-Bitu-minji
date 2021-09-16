@@ -44,6 +44,11 @@ string findPostfix(string str){
                 break;
         }
     }
+    // 04. 스택에 남아있는 연산자들 출력
+    while(!s.empty()) {
+        answer += s.top();
+        s.pop();
+    }
     return answer;
 
 }
@@ -58,10 +63,4 @@ int main(){
 
     // 후위표기식 연산자 순위 : 우선 순위가 낮은 연산자부터 큰 연산자 순으로 쌓인다
     cout << findPostfix(str);
-
-    // 04. 스택에 남아있는 연산자들 출력
-    while(!s.empty()) {
-        cout << s.top();
-        s.pop();
-    }
 }

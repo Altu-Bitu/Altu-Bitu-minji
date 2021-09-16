@@ -8,22 +8,16 @@ using namespace std;
 int alphabet[26];
 
 double calcOp(double num1, double num2, char op){
-    double ans;
     switch(op){
         case '+':
-            ans = num1+num2;
-            break;
+            return num1+num2;
         case '-':
-            ans = num1-num2;
-            break;
+            return num1-num2;
         case '*':
-            ans = num1*num2;
-            break;
+            return num1*num2;
         case '/':
-            ans = num1/num2;
-            break;
+            return num1/num2;
     }
-    return ans;
 }
 
 int main(){

@@ -13,9 +13,10 @@ int solution(vector<vector<int>> board, vector<int> moves) {
 
     // 00. 각 열의 인형 스택에 담기
     for (int i=0; i<board.size(); i++){
-        for (int j=0; j<board.size(); j++){
-            if (board[i][j] != 0)
-                grid[i].push(board[i][j]);
+        for (int j=board.size()-1; j>=0; j--){
+            // 열
+            if (board[j][i] != 0)
+                grid[i].push(board[j][i]);
         }
     }
 
