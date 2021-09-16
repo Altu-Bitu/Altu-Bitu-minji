@@ -13,4 +13,5 @@ add_executable(CMAKE_ROOT
         #assignments/1935.cpp
         #assignments/1918.cpp
         #assignments/5430.cpp
-        assignments/kakao_crane.cpp)
+        assignments/kakao_crane.cpp
+        )

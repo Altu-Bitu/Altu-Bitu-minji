@@ -7,9 +7,28 @@
 using namespace std;
 int alphabet[26];
 
+double calcOp(double num1, double num2, char op){
+    double ans;
+    switch(op){
+        case '+':
+            ans = num1+num2;
+            break;
+        case '-':
+            ans = num1-num2;
+            break;
+        case '*':
+            ans = num1*num2;
+            break;
+        case '/':
+            ans = num1/num2;
+            break;
+    }
+    return ans;
+}
+
 int main(){
     int n;
-    double a, b;
+    double num1, num2;
     string str;
 
     cin >> n >> str;
@@ -18,31 +37,18 @@ int main(){
 
     stack<double> s;
     for (int i=0; i<str.length(); i++){
-        // 01. 연산자인 경우
-        if (str[i] == '+' || str[i] == '-' || str[i] =='*' || str[i]=='/'){
-            a = s.top();
-            s.pop();
-            b = s.top();
-            s.pop();
-            switch(str[i]){
-                // b가 a보다 크다(input 기준 더 뒤쪽)
-                case '+':
-                    s.push(b+a);
-                    break;
-                case '-':
-                    s.push(b-a);
-                    break;
-                case '*':
-                    s.push(b*a);
-                    break;
-                case '/':
-                    s.push(b/a);
-                    break;
-            }
+        // 01. 피연산자인 경우
+        if (isupper(str[i])) {
+            s.push(alphabet[str[i]- 'A']);
+            continue;
         }
-        // 02. 피연산자인 경우
-        else
-            s.push(alphabet[str[i] - 'A']);
+        // 02. 연산자인 경우
+        num1 = s.top();
+        s.pop();
+        num2 = s.top();
+        s.pop();
+        // num2가 num1보다 크다(input 기준 더 뒤쪽)
+        s.push(calcOp(num2, num1, str[i]));
     }
 
     // 03. 최종값 꺼내기

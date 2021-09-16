@@ -35,10 +35,7 @@ int main(){
 
         for (auto & function : p){
             if (function == 'R') {
-                if (isReversed)
-                    isReversed = false;
-                else
-                    isReversed = true;
+                isReversed = !isReversed;
             }
             else{ // "D"인 경우
                 if (dq.empty()) {
