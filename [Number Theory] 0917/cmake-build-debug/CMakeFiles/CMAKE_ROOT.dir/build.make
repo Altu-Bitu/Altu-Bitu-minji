@@ -65,27 +65,27 @@ include CMakeFiles/CMAKE_ROOT.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/CMAKE_ROOT.dir/flags.make
 
-CMakeFiles/CMAKE_ROOT.dir/examples/14490.cpp.obj: CMakeFiles/CMAKE_ROOT.dir/flags.make
-CMakeFiles/CMAKE_ROOT.dir/examples/14490.cpp.obj: ../examples/14490.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Kang Minji\OneDrive\Github\Altu-Bitu-minji\[Number Theory] 0917\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CMAKE_ROOT.dir/examples/14490.cpp.obj"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CMAKE_ROOT.dir\examples\14490.cpp.obj -c "C:\Users\Kang Minji\OneDrive\Github\Altu-Bitu-minji\[Number Theory] 0917\examples\14490.cpp"
+CMakeFiles/CMAKE_ROOT.dir/assignments/20302.cpp.obj: CMakeFiles/CMAKE_ROOT.dir/flags.make
+CMakeFiles/CMAKE_ROOT.dir/assignments/20302.cpp.obj: ../assignments/20302.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Kang Minji\OneDrive\Github\Altu-Bitu-minji\[Number Theory] 0917\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CMAKE_ROOT.dir/assignments/20302.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CMAKE_ROOT.dir\assignments\20302.cpp.obj -c "C:\Users\Kang Minji\OneDrive\Github\Altu-Bitu-minji\[Number Theory] 0917\assignments\20302.cpp"
 
-CMakeFiles/CMAKE_ROOT.dir/examples/14490.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CMAKE_ROOT.dir/examples/14490.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Kang Minji\OneDrive\Github\Altu-Bitu-minji\[Number Theory] 0917\examples\14490.cpp" > CMakeFiles\CMAKE_ROOT.dir\examples\14490.cpp.i
+CMakeFiles/CMAKE_ROOT.dir/assignments/20302.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CMAKE_ROOT.dir/assignments/20302.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Kang Minji\OneDrive\Github\Altu-Bitu-minji\[Number Theory] 0917\assignments\20302.cpp" > CMakeFiles\CMAKE_ROOT.dir\assignments\20302.cpp.i
 
-CMakeFiles/CMAKE_ROOT.dir/examples/14490.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CMAKE_ROOT.dir/examples/14490.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Kang Minji\OneDrive\Github\Altu-Bitu-minji\[Number Theory] 0917\examples\14490.cpp" -o CMakeFiles\CMAKE_ROOT.dir\examples\14490.cpp.s
+CMakeFiles/CMAKE_ROOT.dir/assignments/20302.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CMAKE_ROOT.dir/assignments/20302.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Kang Minji\OneDrive\Github\Altu-Bitu-minji\[Number Theory] 0917\assignments\20302.cpp" -o CMakeFiles\CMAKE_ROOT.dir\assignments\20302.cpp.s
 
 # Object files for target CMAKE_ROOT
 CMAKE_ROOT_OBJECTS = \
-"CMakeFiles/CMAKE_ROOT.dir/examples/14490.cpp.obj"
+"CMakeFiles/CMAKE_ROOT.dir/assignments/20302.cpp.obj"
 
 # External object files for target CMAKE_ROOT
 CMAKE_ROOT_EXTERNAL_OBJECTS =
 
-CMAKE_ROOT.exe: CMakeFiles/CMAKE_ROOT.dir/examples/14490.cpp.obj
+CMAKE_ROOT.exe: CMakeFiles/CMAKE_ROOT.dir/assignments/20302.cpp.obj
 CMAKE_ROOT.exe: CMakeFiles/CMAKE_ROOT.dir/build.make
 CMAKE_ROOT.exe: CMakeFiles/CMAKE_ROOT.dir/linklibs.rsp
 CMAKE_ROOT.exe: CMakeFiles/CMAKE_ROOT.dir/objects1.rsp

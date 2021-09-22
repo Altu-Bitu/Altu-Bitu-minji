@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Kang Minji/OneDrive/Github/Altu-Bitu-minji/[Number Theory] 0917/examples/14490.cpp" "C:/Users/Kang Minji/OneDrive/Github/Altu-Bitu-minji/[Number Theory] 0917/cmake-build-debug/CMakeFiles/CMAKE_ROOT.dir/examples/14490.cpp.obj"
+  "C:/Users/Kang Minji/OneDrive/Github/Altu-Bitu-minji/[Number Theory] 0917/assignments/20302.cpp" "C:/Users/Kang Minji/OneDrive/Github/Altu-Bitu-minji/[Number Theory] 0917/cmake-build-debug/CMakeFiles/CMAKE_ROOT.dir/assignments/20302.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

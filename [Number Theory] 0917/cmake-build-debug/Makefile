@@ -128,29 +128,29 @@ CMAKE_ROOT/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CMAKE_ROOT.dir\build.make CMakeFiles/CMAKE_ROOT.dir/build
 .PHONY : CMAKE_ROOT/fast
 
-examples/14490.obj: examples/14490.cpp.obj
-.PHONY : examples/14490.obj
+assignments/20302.obj: assignments/20302.cpp.obj
+.PHONY : assignments/20302.obj
 
 # target to build an object file
-examples/14490.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\CMAKE_ROOT.dir\build.make CMakeFiles/CMAKE_ROOT.dir/examples/14490.cpp.obj
-.PHONY : examples/14490.cpp.obj
+assignments/20302.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CMAKE_ROOT.dir\build.make CMakeFiles/CMAKE_ROOT.dir/assignments/20302.cpp.obj
+.PHONY : assignments/20302.cpp.obj
 
-examples/14490.i: examples/14490.cpp.i
-.PHONY : examples/14490.i
+assignments/20302.i: assignments/20302.cpp.i
+.PHONY : assignments/20302.i
 
 # target to preprocess a source file
-examples/14490.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\CMAKE_ROOT.dir\build.make CMakeFiles/CMAKE_ROOT.dir/examples/14490.cpp.i
-.PHONY : examples/14490.cpp.i
+assignments/20302.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CMAKE_ROOT.dir\build.make CMakeFiles/CMAKE_ROOT.dir/assignments/20302.cpp.i
+.PHONY : assignments/20302.cpp.i
 
-examples/14490.s: examples/14490.cpp.s
-.PHONY : examples/14490.s
+assignments/20302.s: assignments/20302.cpp.s
+.PHONY : assignments/20302.s
 
 # target to generate assembly for a file
-examples/14490.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\CMAKE_ROOT.dir\build.make CMakeFiles/CMAKE_ROOT.dir/examples/14490.cpp.s
-.PHONY : examples/14490.cpp.s
+assignments/20302.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CMAKE_ROOT.dir\build.make CMakeFiles/CMAKE_ROOT.dir/assignments/20302.cpp.s
+.PHONY : assignments/20302.cpp.s
 
 # Help Target
 help:
@@ -161,9 +161,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... CMAKE_ROOT
-	@echo ... examples/14490.obj
-	@echo ... examples/14490.i
-	@echo ... examples/14490.s
+	@echo ... assignments/20302.obj
+	@echo ... assignments/20302.i
+	@echo ... assignments/20302.s
 .PHONY : help
 
 

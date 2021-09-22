@@ -2,7 +2,7 @@ file(REMOVE_RECURSE
   "CMAKE_ROOT.exe"
   "CMAKE_ROOT.exe.manifest"
   "CMAKE_ROOT.pdb"
-  "CMakeFiles/CMAKE_ROOT.dir/examples/14490.cpp.obj"
+  "CMakeFiles/CMAKE_ROOT.dir/assignments/20302.cpp.obj"
   "libCMAKE_ROOT.dll.a"
 )
 
