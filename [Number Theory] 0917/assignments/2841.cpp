@@ -21,22 +21,18 @@ int main(){
             continue;
         }
         // 02. 해당 줄이 비어있지 않고,
-        else {
-            // 1) 현재 입력받은 프렛이 낮으면 top이 입력받은 프렛보다 작거나 같을 때까지 pop
-            if (s[line].top() > pret) {
-                while (!s[line].empty() && s[line].top() > pret) {
-                    s[line].pop();
-                    cnt++;
-                }
-            }
-            // 2) 현재 입력받은 프렛과 같으면 넘어가기
-            if (!s[line].empty() && s[line].top() == pret) {
-                continue;
-            }
-            // 3) 현재 입력받은 프렛이 높으면 추가
-            s[line].push(pret);
+        // 1) 현재 입력받은 프렛이 낮으면 top이 입력받은 프렛보다 작거나 같을 때까지 pop
+        while (!s[line].empty() && s[line].top() > pret) {
+            s[line].pop();
             cnt++;
         }
+        // 2) 현재 입력받은 프렛과 같으면 넘어가기
+        if (!s[line].empty() && s[line].top() == pret) {
+            continue;
+        }
+        // 3) 현재 입력받은 프렛이 높으면 추가
+        s[line].push(pret);
+        cnt++;
     }
     cout << cnt;
 }

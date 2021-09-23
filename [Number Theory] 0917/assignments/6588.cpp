@@ -34,7 +34,8 @@ int main(){
 
         bool flag = false;
         // 02. 골드바흐의 수 구하기
-        for (int i=3; i<=num; i++){ // i*i 하면 안 됨
+        // 연산 단축 -> num/2까지 연산
+        for (int i=3; i<=num/2; i++){ // i*i 하면 안 됨
             if (is_prime[i] && is_prime[num-i]) {
                 flag = true;
                 cout << num << " = " << i << " + " << num-i << "\n";
