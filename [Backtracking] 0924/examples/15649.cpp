@@ -13,31 +13,35 @@
 using namespace std;
 const int SIZE = 8;
 
-int n, m; // 백트래킹은 전역변수 사용하면 편하다
-int num[SIZE];
-bool check[SIZE+1];
+int n, m;
+int num[SIZE]; // 수열
+bool check[SIZE+1]; // 수 사용 체크 배열
 
-void backtracking(int cnt){ // cnt : 수열의 인덱스
-    if (cnt == m){ // 기저조건
-        for (int i=0; i<cnt; i++)
+// 재귀함수로 구현한 백트래킹
+void backtracking(int cnt){
+    // 계속 가지치기 -> promising한 가지에 도달하면 return
+    // 나머지 가지는 false로 저장해서 차단함
+    if (cnt == m){ // 기저조건, 길이 m인 수열 만든 경우
+        for (int i=0; i<cnt; i++) // 바로 출력함
             cout << num[i] << ' ';
         cout << "\n";
         return;
     }
     for (int i=1; i<=n; i++){
-        if (!check[i]) {
+        if (!check[i]){ // 현재 수열에 해당 수 없다면
             num[cnt] = i; // 수열에 값 저장
             check[i] = true; // 수 사용
-            backtracking(cnt + 1); // 다음 수열 인덱스 호출
+            backtracking(cnt+1); // 다음 수열 인덱스 호출
             check[i] = false; // 원래 상태로 돌려놓음
         }
     }
 }
 
 int main(){
+
     // 입력
     cin >> n >> m;
 
-    // 연산
+    // 연산 + 출력
     backtracking(0); // 인덱스 0번부터 시작
 }
