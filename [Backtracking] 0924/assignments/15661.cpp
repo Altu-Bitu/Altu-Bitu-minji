@@ -2,6 +2,8 @@
 // Created by Kang Minji on 2021-09-30.
 //
 
+// calcMin 함수로 뺐을 때 1320ms
+// 안 뺴면 1296ms
 #include <iostream>
 using namespace std;
 
