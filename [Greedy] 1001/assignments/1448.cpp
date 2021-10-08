@@ -17,8 +17,11 @@ int makeTriangle(int n){
         a = straw[i];
         b = straw[i+1];
         c = straw[i+2];
-        if (a < b+c && max_length < a+b+c)
-            max_length = a+b+c;
+        // 각 변의 최댓값을 구한다 -> 이미 오름차순 정렬했으므로 삼각형 만족하면 바로 return
+        if (a < b+c) {
+            max_length = a + b + c;
+            return max_length;
+        }
     }
     return max_length;
 }

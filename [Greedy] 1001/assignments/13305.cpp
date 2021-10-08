@@ -7,10 +7,7 @@
 const int MAX =  1000000000;
 using namespace std;
 
-vector<long long> dist;
-vector<long long> cost;
-
-long long minCost(int n){
+long long minCost(int n,  vector<long long> &dist,  vector<long long> &cost){
     long long sum = 0;
     long long min_val = MAX;
     /*
@@ -31,13 +28,14 @@ int main(){
 
     // 입력
     cin >> n;
-    dist.assign(n, 0);
-    cost.assign(n, 0);
+    vector<long long> dist(n, 0);
+    vector<long long> cost(n, 0);
+
     for (int i=0; i<n-1; i++) // n 아니고 n-1
         cin >> dist[i]; // 도로의 길이
     for (int i=0; i<n; i++)
         cin >> cost[i]; // 리터당 가격
 
     // 연산 + 출력
-    cout << minCost(n);
+    cout << minCost(n, dist, cost);
 }

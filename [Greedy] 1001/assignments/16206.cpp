@@ -7,7 +7,6 @@
 #include <algorithm>
 using namespace std;
 
-vector<int> cake_mult; // 10의 배수인 케이크
 vector<int> cake; // 10 이상인 케이크
 
 /* 1) 길이가 10보다 큰 경우만 자르기
@@ -18,18 +17,25 @@ vector<int> cake; // 10 이상인 케이크
  * 10의 배수 순서대로 sort & 자르기
  * 10 이상인 케이크 순서대로 sort & 자르기
  */
+
+bool compare(const int &a, const int &b){
+    if (a%10 == 0 && b%10 == 0) // 둘 다 10의 배수인 경우
+        return a < b; // 길이가 짧은 것부터 리턴
+    return a%10 == 0; // 10의 배수인 것 먼저 리턴
+}
+
 int makeCake(int m, int ans){
     int cut = 0;
 
-    for (int i=0; i<cake_mult.size(); i++){
-        while(cake_mult[i] >= 10){
-            if (cake_mult[i] == 10) {
+    for (int i=0; i<cake.size(); i++){
+        while(cake[i] >= 10){
+            if (cake[i] == 10) {
                 ans++;
                 break;
             }
             if (cut == m)
                 return ans;
-            cake_mult[i] -= 10;
+            cake[i] -= 10;
             ans++;
             cut++;
         }
@@ -47,20 +53,12 @@ int main(){
         cin >> tmp;
         if (tmp == 10)  // 1) 10인 경우는 바로 ans에 추가
             ans++;
-        else if (tmp%10 == 0) // 2) 10의 배수인 경우
-            cake_mult.push_back(tmp);
-        else // 3) 10 이상인 경우
+        else // 2) 나머지는 일단 다 합친다
             cake.push_back(tmp);
     }
 
     // 연산
-    sort(cake_mult.begin(), cake_mult.end());
-    sort(cake.begin(), cake.end());
-
-    // (2) 뒤에 (3) 추가한다
-    for (int i=0; i<cake.size(); i++){
-        cake_mult.push_back(cake[i]);
-    }
+    sort(cake.begin(), cake.end(), compare);
 
     cout << makeCake(m, ans);
 
