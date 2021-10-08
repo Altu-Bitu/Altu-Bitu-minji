@@ -1,6 +1,5 @@
-//
 // Created by Kang Minji on 2021-09-28.
-//
+
 
 #include <iostream>
 #include <vector>
