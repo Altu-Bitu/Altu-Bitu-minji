@@ -1,0 +1,3 @@
+C:/Users/Kang Minji/OneDrive/Github/Altu-Bitu-minji/[Number Theory] 0917/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Kang Minji/OneDrive/Github/Altu-Bitu-minji/[Number Theory] 0917/cmake-build-debug/CMakeFiles/CMAKE_ROOT.dir
+C:/Users/Kang Minji/OneDrive/Github/Altu-Bitu-minji/[Number Theory] 0917/cmake-build-debug/CMakeFiles/edit_cache.dir
