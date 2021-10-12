@@ -12,37 +12,22 @@ vector<pair<int, int>> student;
 // Conquer : 스위치 번호가 given_num의 배수이면 스위치 상태를 바꾼다
 // 스위치 전체 개수, 학생이 받은 수를 인자로 사용
 void onoffBoy(int n, int given_num){
-    for (int i=n; i>=given_num; i--){
-        if (i%given_num == 0){
-            if (switches[i] == 0)
-                switches[i] = 1;
-            else
-                switches[i] = 0;
-        }
-    }
+    for (int i=given_num; i<=n; i+=given_num)
+        switches[i] = !switches[i];
 }
 
 // Conquer : 자기가 받은 수 기준 대칭인 최대 범위 구함 -> 그 안에 있는 스위치 reverse
 void onoffGirl(int n, int given_num){
-    int left = given_num-1;
-    int right = given_num+1;
-    // 01. given_num 기준 최대 범위 구함
-    while(left>=1 && right<=n){ // 범위 내에 있는 동안
+    // 00. 자기 switch 바꾸기
+    switches[given_num] = !switches[given_num];
+    // 01. given_num 기준 양쪽으로 범위 넓힘
+    for (int i=1; i<given_num; i++){
         // 기저조건
-        if (switches[left] != switches[right]){
+        if (given_num + i > n || switches[given_num - i] != switches[given_num + i])
             break;
-        }
-        left--;
-        right++;
-    }
-    left++;
-    right--;
-    // 02. 범위 내의 switch reverse
-    for (int i=left; i<=right; i++){
-        if (switches[i] == 0)
-            switches[i] = 1;
-        else
-            switches[i] = 0;
+        // 02. 범위 내의 switch reverse
+        switches[given_num - i] = !switches[given_num - i];
+        switches[given_num + i] = !switches[given_num + i];
     }
 }
 
