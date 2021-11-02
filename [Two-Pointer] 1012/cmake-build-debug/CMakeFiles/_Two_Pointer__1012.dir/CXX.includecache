@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Kang Minji/OneDrive/Github/Altu-Bitu-minji/[Two-Pointer] 1012/assignments/2607.cpp
+iostream
+-
+vector
+-
+map
+-
+algorithm
+-
+
