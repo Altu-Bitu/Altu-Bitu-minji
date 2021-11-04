@@ -1,0 +1,3 @@
+C:/Users/Kang Minji/OneDrive/Github/Altu-Bitu-minji/[Two-Pointer] 1012/cmake-build-debug/CMakeFiles/_Two_Pointer__1012.dir
+C:/Users/Kang Minji/OneDrive/Github/Altu-Bitu-minji/[Two-Pointer] 1012/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Kang Minji/OneDrive/Github/Altu-Bitu-minji/[Two-Pointer] 1012/cmake-build-debug/CMakeFiles/rebuild_cache.dir

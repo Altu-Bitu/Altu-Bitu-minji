@@ -6,3 +6,8 @@ set(CMAKE_CXX_STANDARD 14)
 add_executable(_Two_Pointer__1012
         #assignments/14500.cpp
         assignments/2607.cpp)
+        #examples/11659.cpp
+        #examples/21921.cpp
+        #examples/2470.cpp
+        examples/1644.cpp
+        examples/prog_jewelyShop.cpp)
