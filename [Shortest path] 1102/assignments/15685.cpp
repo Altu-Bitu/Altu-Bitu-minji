@@ -1,12 +1,12 @@
 //
-// Created by KangMinji on 2021-11-14.
+// Created by KangMinji on 2021-11-13.
 //
 
 #include <iostream>
 #include <vector>
 
 using namespace std;
-typedef pair<int, int> ci;
+typedef pair<int, int> ci; // 연산을 간단하게 하기 위함
 const int SIZE = 100 + 1; //격자 사이즈
 
 //우, 상, 좌, 하
@@ -15,14 +15,15 @@ int dx[4] = {1, 0, -1, 0};
 
 //크기가 1x1인 정사각형의 네 꼭짓점이 모두 드래곤 커브의 일부인 것이 개수 구하기
 int cntSquare(vector<vector<bool>> &board) {
-    int ans = 0;
-    for (int i = 0; i < SIZE - 1; i++) {
-        for (int j = 0; j < SIZE - 1; j++) {
+    int ans = 0; // 결과값(사각형의 수) 저장
+    for (int i = 0; i < SIZE - 1; i++) { // row
+        for (int j = 0; j < SIZE - 1; j++) { // col
+            // 사각형의 꼭짓점이 격자 밖으로 벗어나지 않는다면
             if (board[i][j] && board[i][j + 1] && board[i + 1][j] && board[i + 1][j + 1])
-                ans++;
+                ans++; // 사각형의 수 증가
         }
     }
-    return ans;
+    return ans; // 사각형의 수 리턴
 }
 
 ci makeDragonCurve(vector<vector<bool>> &board, vector<int> &direc, ci point) {
@@ -30,10 +31,10 @@ ci makeDragonCurve(vector<vector<bool>> &board, vector<int> &direc, ci point) {
     for (int i = size - 1; i >= 0; i--) {
         int new_direc = (direc[i] + 1) % 4; //현재 시작 점의 방향
         point = {point.first + dy[new_direc], point.second + dx[new_direc]}; //현재 끝 점
-        board[point.first][point.second] = true;
-        direc.push_back(new_direc);
+        board[point.first][point.second] = true; // 격자 갱신
+        direc.push_back(new_direc); // 방향 갱신
     }
-    return point;
+    return point; // 마지막 위치 리턴
 }
 
 /**
@@ -55,13 +56,13 @@ ci makeDragonCurve(vector<vector<bool>> &board, vector<int> &direc, ci point) {
  */
 
 int main() {
-    int n, x, y, d, g;
+    int n, x, y, d, g; // 드래곤 커브의 개수, 위치, 시작 방향, 세대
 
     //입력 & 연산
-    cin >> n;
+    cin >> n; // 드래곤 커브의 개수
     vector<vector<bool>> board(SIZE, vector<bool>(SIZE, false)); //100x100 격자
     while (n--) {
-        cin >> x >> y >> d >> g;
+        cin >> x >> y >> d >> g; // 드래곤 커브의 정보 입력
         vector<int> direc; //세대의 방향 정보 저장 및 보존하는 벡터
         ci end_point = {y + dy[d], x + dx[d]}; //0세대 끝점
         board[y][x] = board[end_point.first][end_point.second] = true; //0세대 시작점, 끝점 초기화
